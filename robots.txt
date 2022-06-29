@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://gift-recommender.com/sitemap.xml
+Disallow: 

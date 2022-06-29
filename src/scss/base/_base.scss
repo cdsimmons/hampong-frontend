@@ -1,0 +1,55 @@
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: $black;
+    background-color: $color-grey-light;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pages {
+    display: table;
+    position: relative;
+    min-height: calc(100vh - #{$dimension-height-footer-mobile} - #{$dimension-height-header-mobile});
+    width: 100%;
+
+    &:before {
+        @include loading-spinner($color-primary, 120px, 2);
+    }
+
+    @media (min-width: $bp-from-tablet) {
+        min-height: calc(100vh - #{$dimension-height-footer-desktop} - #{$dimension-height-header-desktop});
+    }
+}
+
+.page {
+    position: relative;
+    background-color: $color-grey-light;
+    display: none;
+
+    &.active {
+        display: table-cell;
+    }
+}
+
+// Hide chrome's background color change...
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 100px white inset !important;
+}

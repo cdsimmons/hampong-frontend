@@ -1,0 +1,56 @@
+.range {
+    background: transparent;
+    padding: 25px;
+    box-shadow: none;
+
+    input {
+        position: absolute;
+        top: -99999px;
+    }
+
+    .noUi-horizontal {
+        .noUi-handle {
+            border: none;
+            border-radius: 100px;
+            background-color: $white;
+            @include scale(height, 55px, 67px);
+            @include scale(width, 55px, 67px);
+            box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.08);
+            transform: translateY(-50%);
+            top: 8px;
+            outline: none;
+            cursor: pointer;
+    
+            &:before, &:after {
+                display: none;
+            }
+        }
+
+        .noUi-tooltip {
+            bottom: auto;
+            top: 50%;
+            border: none;
+            transform: translate(-50%, -50%);
+        }
+
+        .noUi-connects {
+            background-color: $white;
+        }
+
+        .noUi-connect {
+            background-color: #e8e8e8;
+        }
+
+        .noUi-origin {
+            @include scale(margin-right, -14px, -24px);
+
+            &:last-child {
+                margin-right: -10px;
+            }
+
+            &.active {
+                z-index: 9 !important;
+            }
+        }
+    }
+}

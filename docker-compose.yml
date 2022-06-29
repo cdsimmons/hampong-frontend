@@ -1,0 +1,13 @@
+version: "2"
+services:
+  node:
+    image: "arm32v7/node:12.18.4"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - "${PORT}:${PORT}"
+    command: "npx forever server.js"

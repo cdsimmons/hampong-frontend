@@ -1,0 +1,56 @@
+
+// Color
+$black: #000;
+$white: #fff;
+
+$color-grey: #40525c;
+$color-grey-light: #F4F4F6;
+
+$color-pink: #F1327A;
+$color-orange: #ff9f00;
+
+$color-primary: $color-pink;
+
+
+// Family
+$family-sans: Roboto, sans-serif;
+$family-script: "Oleo Script", Roboto, sans-serif;
+
+
+// Weight
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-black: 900;
+
+
+// Breakpoints
+$bp-to-desktop-widest: 1620px;
+
+$bp-from-desktop-wide: 1440px;
+$bp-to-desktop-wide: $bp-from-desktop-wide - 1px;
+
+$bp-from-desktop: 1140px;
+$bp-to-desktop: $bp-from-desktop - 1px;
+
+$bp-from-tablet: 768px;
+$bp-to-tablet: $bp-from-tablet - 1px;
+
+$bp-from-tween: 651px;
+$bp-to-tween: $bp-from-tween - 1px;
+
+$bp-from-mobile: 481px;
+$bp-to-mobile: $bp-from-mobile - 1px;
+
+$bp-from-navbar: 1150px;
+$bp-to-navbar: $bp-from-navbar - 1px;
+
+$gutter: 20px;
+
+
+// $dimension-height-footer-mobile: 61px;
+// $dimension-height-footer-desktop: 61px;
+$dimension-height-footer-mobile: 0px;
+$dimension-height-footer-desktop: 0px;
+
+$dimension-height-header-mobile: 49px;
+$dimension-height-header-desktop: 59px;

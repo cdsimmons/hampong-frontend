@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1640px;
+    @include scale(padding-left, $gutter / 2, $gutter);
+    @include scale(padding-right, $gutter / 2, $gutter);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container--slim {
+    max-width: 980px;
+}

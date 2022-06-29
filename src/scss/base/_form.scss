@@ -1,0 +1,95 @@
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -($gutter / 2);
+    margin-right: -($gutter / 2);
+    margin-bottom: -30px;
+}
+
+.field {
+    width: 100%;
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+    margin-bottom: 30px;
+}
+
+.field--name {
+    width: percentage(4/12);
+
+    @media (max-width: $bp-to-tablet) {
+        width: percentage(12/12);
+    }
+}
+
+.field--age {
+    width: percentage(2/12);
+
+    @media (max-width: $bp-to-tablet) {
+        width: percentage(6/12);
+    }
+}
+
+.field--gender {
+    width: percentage(2/12);
+
+    @media (max-width: $bp-to-tablet) {
+        width: percentage(6/12);
+    }
+}
+
+.field--price {
+    width: percentage(4/12);
+
+    @media (max-width: $bp-to-tablet) {
+        width: percentage(12/12);
+    }
+}
+
+.field__label {
+    display: block;
+    font-weight: $weight-medium;
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+}
+
+.field__bevel {
+    background-color: $white;
+    border-radius: 100px;
+    @include scale(padding-left, 20px, 30px);
+    @include scale(padding-right, 20px, 30px);
+    box-shadow: 0px 5px 11px 0px rgba(0,0,0,0.08);
+}
+
+.field__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    @include scale(padding-top, 8px, 15px);
+    @include scale(padding-bottom, 8px, 15px);
+}
+
+
+select {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.form__error {
+    text-align: center;
+    font-size: 18px;
+    max-width: 760px;
+    margin: auto;
+    @include scale(margin-top, 40px, 60px);
+}
+
+.form__submit {
+    text-align: center;
+    @include scale(margin-top, 40px, 60px);
+    @include scale(padding-bottom, 70px, 100px);
+
+    .button {
+        width: 100%;
+        max-width: 520px;
+    }
+}

@@ -1,0 +1,110 @@
+.button {
+    background-color: $color-primary;
+    border: none;
+    border-radius: 100px;
+    font-size: 22px;
+    font-weight: $weight-medium;
+    text-align: center;
+    padding: 20px 90px;
+    color: $white;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border-color 150ms ease-in-out, opacity 250ms ease-in-out;
+    border: 2px solid transparent;
+    white-space: nowrap;
+
+    @include scale(padding-top, 15px, 20px);
+    @include scale(padding-bottom, 15px, 20px);
+    @include scale(padding-left, 40px, 60px);
+    @include scale(padding-right, 40px, 60px);
+
+    span, i {
+        display: inline-block;
+    }
+
+    i {
+        transition: all 250ms ease-in-out;
+        height: 20px;
+        width: 18px;
+        opacity: 0;
+        margin-right: 10px;
+        margin-left: -33px;
+        transform: translateX(-10px);
+        vertical-align: middle;
+        margin-top: -4px;
+    }
+
+    span + i {
+        padding-right: 0;
+        margin-left: 0;
+
+        margin-left: 10px;
+        margin-right: -33px;
+        transform: translateX(10px);
+    }
+
+    .loading &, &:hover {
+        background-color: lighten($color-primary, 5%);
+
+        i {
+            opacity: 1;
+            margin-left: 0;
+            margin-right: 10px;
+            transform: translateX(0);
+        }
+
+        span + i {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+    }
+
+    .loading &, &[disabled] {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    .loading & i {
+        content: "";
+
+        &:after {
+            @include loading-spinner($white);
+        }
+    }
+}
+
+.button--bordered {
+    background-color: transparent;
+    border-color: darken($color-primary, 10%);
+    color: darken($color-primary, 10%);
+
+    .loading &, &:hover {
+        background-color: transparent;
+        color: lighten($color-primary, 0%);
+        border-color: lighten($color-primary, 0%);
+    }
+
+    .loading & i {
+        &:after {
+            @include loading-spinner($color-primary);
+        }
+    }
+}
+
+.button--black.button--bordered {
+    background-color: transparent;
+    border-color: lighten($black, 40%);
+    color: lighten($black, 40%);
+
+    .loading &, &:hover {
+        background-color: transparent;
+        color: lighten($black, 30%);
+        border-color: lighten($black, 30%);
+    }
+
+    .loading & i {
+        &:after {
+            @include loading-spinner($black);
+        }
+    }
+}
