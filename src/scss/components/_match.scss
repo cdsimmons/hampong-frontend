@@ -46,6 +46,11 @@
         opacity: 1;
         pointer-events: all;
     }
+
+    @media (max-width: 400px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .match__score {
@@ -53,7 +58,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    min-height: 200px;
     flex: 1;
     border-radius: 5px;
     opacity: 0.5;
@@ -107,6 +112,10 @@
 .match__score-split {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 400px) {
+        flex-direction: row;
+    }
 }
 
 .match__undo {
@@ -121,13 +130,19 @@
 .match__finish {
     margin-top: auto;
     padding: 5px;
-    opacity: 0;
+    width: 30px;
+    opacity: 1;
     pointer-events: none;
     transition: opacity 150ms ease-in-out;
 
     &.active {
         opacity: 1;
         pointer-events: all;
+    }
+
+    @media (max-width: 400px) {
+        margin-top: 0;
+        margin-left: auto;
     }
 }
 
