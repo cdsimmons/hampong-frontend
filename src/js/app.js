@@ -188,12 +188,9 @@ $(document).on('click', '.match__scores.active .match__finish.active', () => {
     let submitting = false;
     $actionSecondary.on('click', async() => {
         if (!submitting) {
-            // submitting = true;
-            // Submit to database...
+            submitting = true;
             const game = await createGame(sets, startingPlayer);
-            console.log(game);
-
-            // document.location.reload(true);
+            document.location.reload(true);
         }
     });
 

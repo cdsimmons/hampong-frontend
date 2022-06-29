@@ -1,4 +1,4 @@
-const apiUrl = process.env.API_URL || 'https://gift-recommender-backend.herokuapp.com';
+const apiUrl = process.env.API_URL || 'https://hampong-backend.vercel.app';
 
 export const createGame = (sets, startingPlayer) => {
     // games... sets, startingPlayer, date, sourceIp
