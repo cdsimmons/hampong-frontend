@@ -1,6 +1,6 @@
 const apiUrl = process.env.API_URL || 'https://hampong-backend.vercel.app';
 
-export const createGame = (sets, startingPlayer) => {
+export const createGame = (sets, startingPlayer, playerOne, playerTwo) => {
     // games... sets, startingPlayer, date, sourceIp
     
     return $.ajax({
@@ -8,7 +8,9 @@ export const createGame = (sets, startingPlayer) => {
         type: 'POST',
         data: {
             sets,
-            startingPlayer
+            startingPlayer,
+            playerOne,
+            playerTwo
         }
     });
 }

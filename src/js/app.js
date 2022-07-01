@@ -189,7 +189,10 @@ $(document).on('click', '.match__scores.active .match__finish.active', () => {
     $actionSecondary.on('click', async() => {
         if (!submitting) {
             submitting = true;
-            const game = await createGame(sets, startingPlayer);
+            const playerOne = $('.match__player:first-child .field__input').val();
+            const playerTwo = $('.match__player:last-child .field__input').val();
+
+            const game = await createGame(sets, startingPlayer, playerOne, playerTwo);
             document.location.reload(true);
         }
     });
